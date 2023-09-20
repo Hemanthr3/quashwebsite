@@ -17,7 +17,7 @@ const Integration = () => {
         alt="integration-mob"
         width={694}
         height={673}
-        className="flex-grow"
+        className="flex-grow md:flex hidden"
       />
       <Image
         src="/integration-mob.svg"
