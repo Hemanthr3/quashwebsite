@@ -9,6 +9,7 @@ import Resolution from "@/components/resolution";
 import Collaboration from "@/components/collaboration";
 import Integration from "@/components/integration";
 import Callback from "@/components/callback";
+import CodeSection from "@/components/code";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function Home() {
         <Resolution />
         <Collaboration />
         <Integration />
+        <CodeSection />
         <Callback />
       </main>
       <Footer />
