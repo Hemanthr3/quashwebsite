@@ -47,7 +47,7 @@ const footerMedia = ["/linkedIn.svg", "/product-hunt.svg", "/x-logo.svg"];
 const Footer = () => {
   const router = useRouter();
   return (
-    <div className="flex flex-col bottom-0 w-full gap-12 md:gap-16 pl-[30px] pt-[26px] pr-[122px] pb-[96px] md:pl-[122px] md:pt-[64px] md:pr-[200px] md:pb-[116px] text-[16px] font-[400] text-[#ECECEE] md:text-[24px]">
+    <div className="flex flex-col bottom-0 w-full gap-12 md:gap-16 pl-[30px] pt-[26px] pr-[122px] pb-[96px] md:pl-[122px] md:pt-[64px] md:pr-[200px] md:pb-[116px] text-[16px] font-[400] text-[#ECECEE] md:text-[24px] bg-[#0D0D0D]">
       <Image
         src="/logo-mobile.svg"
         alt="Quash Logo"

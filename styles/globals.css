@@ -54,38 +54,66 @@ backdrop-filter: blur(10px);
 
 .grad-report{
   background-image: radial-gradient(#E028A0, black);
-  opacity: 0.44;
+  /* opacity: 0.34; */
 filter: blur(37.2599983215332px);
 }
 
 
 .report-gradient-line{
-  width: 208px;
-  height: 2px;
+  /* width: 208px;
+  height: 2px; */
   flex-shrink: 0;
   border-radius: 200px;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) -6.62%, #901F67 52.55%, rgba(4, 1, 3, 0.00) 107%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #901F67 52.55%, rgba(4, 1, 3, 0.00) 97%);
 }
 
 .report-gradient-text{
-    font-size: 32px;
+    /* font-size: 32px; */
     background: -webkit-linear-gradient(90deg, #A81EFF 11.68%, #FF56D0 80.44%,#343297);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
+  .grad-resolution{
+    background-image: radial-gradient(#3CD0C8, black);
+    /* opacity: 0.34; */
+  filter: blur(37.2599983215332px);
+  }
+
 
 .resolution-gradient-line{
-  width: 208px;
-  height: 2px;
+  /* width: 208px; */
+  /* height: 2px; */
   flex-shrink: 0;
   border-radius: 200px;
-background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) -6.62%, #61BEB9 52.55%, rgba(4, 1, 3, 0.00) 107%);
+background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rgba(4, 1, 3, 0.00) 97%);
 }
 
 .resolution-gradient-text{
-    font-size: 32px;
+    /* font-size: 32px; */
     background: -webkit-linear-gradient(92deg, #5FBAB5 11.68%, #FFE70D 151.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .grad-collaboration{
+    background-image: radial-gradient(#BAA65F, black);
+    /* opacity: 0.34; */
+  filter: blur(37.2599983215332px);
+  }
+
+
+.collaboration-gradient-line{
+  /* width: 208px; */
+  /* height: 2px; */
+  flex-shrink: 0;
+  border-radius: 200px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 8.27%, #BEAA61 54.1%, rgba(0, 0, 0, 0.00) 100.67%);
+}
+
+.collaboration-gradient-text{
+    /* font-size: 32px; */
+    background: -webkit-linear-gradient(92deg, #97FF86 -23.86%, #FFE70D 29.09%, #80C392 151.44%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

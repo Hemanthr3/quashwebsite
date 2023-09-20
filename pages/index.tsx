@@ -6,6 +6,8 @@ import Hero from "@/components/hero";
 import Comparision from "@/components/comparision";
 import Reporting from "@/components/reporting";
 import Resolution from "@/components/resolution";
+import Collaboration from "@/components/collaboration";
+import Integration from "@/components/integration";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +20,9 @@ export default function Home() {
         <Hero />
         <Comparision />
         <Reporting />
-        {/* <Resolution /> */}
+        <Resolution />
+        <Collaboration />
+        <Integration />
       </main>
       <Footer />
     </div>

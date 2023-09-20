@@ -8,7 +8,7 @@ const reportingMedia = ["/shake.svg", "/logs.svg", "/notes.svg"];
 const Reporting = () => {
   return (
     <div className="flex px-4 pb-16 flex-col justify-center items-center">
-      <div className="relative w-full flex justify-center items-center flex-col">
+      <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
         {/* <Image
           src="/reporting-gradient.svg"
           alt="reporting-gradient"
@@ -16,12 +16,29 @@ const Reporting = () => {
           height={192}
           className=""
         /> */}
-        <div className="grad-report h-[192px] w-[192px]"></div>
-        <div className="w-full h-[48px] absolute top-0 bg-black"></div>
-        <div className="absolute top-[48px] flex flex-col justify-center items-center gap-12">
-          <div className="report-gradient-line" />
-          <span className="report-gradient-text">Reporting</span>
+        <div className="grad-report h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
+        <div className="w-full h-[48px] md:h-[200px] absolute top-0 bg-black"></div>
+        <div className="absolute top-[48px] md:top-[200px] flex flex-col justify-center items-center gap-12 md:gap-[116px]">
+          <div className="report-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
+          <span className="report-gradient-text text-[32px] md:text-[60px] md:font-[600] leadind-normal">
+            Reporting
+          </span>
         </div>
+      </div>
+      <span className="text-[#ECECEE] text-[16px] font-[300] md:text-[24px] md:mt-5 md:font-[400] w-[236px] text-center leading-normal pb-20 md:pb-[170px] md:w-full">
+        Raise comprehensive tickets with minimal effort
+      </span>
+      <div className="hidden justify-center items-center gap-10 px-[116px] pb-[256px]  md:flex">
+        {reportingMedia.map((media, index) => (
+          <Image
+            key={index}
+            src={media}
+            alt={media}
+            width={400}
+            height={554}
+            className=""
+          />
+        ))}
       </div>
       <Carousel
         // autoPlay
@@ -31,7 +48,7 @@ const Reporting = () => {
         showThumbs={false}
         interval={3000}
         centerMode={true}
-        className=""
+        className="flex md:hidden"
       >
         {reportingMedia.map((media, index) => (
           <Image
