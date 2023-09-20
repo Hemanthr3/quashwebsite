@@ -16,7 +16,7 @@ const Hero = () => {
             className="hidden md:flex"
           />
           <div>
-            <span className="text-[32px] font-[600] md:text-[24px] text-[#ECECEE] md:font-[600] w-full text-center leading-normal">
+            <span className="text-[32px] font-[600] md:text-[24px] text-[#ECECEE] md:font-[600] w-full text-center leading-normal md:hidden">
               Mobile Testing
               <br />
               should not be slow
