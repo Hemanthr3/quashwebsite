@@ -143,31 +143,31 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
   .quick {
     color: #fff;
     font-family: var(--fira-mono);
-    font-size: 10px;
+    /* font-size: 10px; */
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 0.05px;
+    /* letter-spacing: 0.05px; */
   }
   
   .key {
     color: #f2a68c;
     font-family: var(--fira-mono);
-    font-size: 10px;
+    /* font-size: 10px; */
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 0.05px;
+    /* letter-spacing: 0.05px; */
   }
   
   .value {
     color: #76f8e7;
     font-family: var(--fira-mono);
-    font-size: 10px;
+    /* font-size: 10px; */
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 0.05px;
+    /* letter-spacing: 0.05px; */
   }
   
   .code-block {
@@ -181,11 +181,11 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
   .numbers p {
     color: rgba(255, 255, 255, 0.5);
     font-family: var(--fira-mono);
-    font-size: 10px;
+    /* font-size: 10px; */
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 0.05px;
+    /* letter-spacing: 0.05px; */
   }
   
   .code-divider {
