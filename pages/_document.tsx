@@ -1,5 +1,5 @@
-import { Html, Main, NextScript } from "next/document";
-import Head from "next/head";
+import { Metadata } from "next";
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
@@ -9,7 +9,6 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
           rel="stylesheet"
         ></link>
-        <title>🐞 Quash - Streamlining QA Processes 🚀</title>
       </Head>
       <body>
         <Main />

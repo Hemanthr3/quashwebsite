@@ -1,7 +1,4 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import Comparision from "@/components/comparision";
 import Reporting from "@/components/reporting";
@@ -10,6 +7,12 @@ import Collaboration from "@/components/collaboration";
 import Integration from "@/components/integration";
 import Callback from "@/components/callback";
 import CodeSection from "@/components/code";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "🐞 Quash - Bug & Crash Reporting for Mobile Developers 🚀",
+  description: "Bug & Crash Reporting for Mobile Developers",
+};
 
 const inter = Inter({ subsets: ["latin"] });
 
