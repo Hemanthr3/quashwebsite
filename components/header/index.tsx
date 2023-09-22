@@ -11,31 +11,37 @@ import {
 import { Button } from "../ui/button";
 import { List, X } from "@/lib/icons";
 import { LoaderDialog, LoaderDialogContent } from "../ui/overlay-loader";
+import { useRouter } from "next/router";
 
 const navButtons = ["Home", "Upcoming", "Team"];
+
+const mobileNav = [
+  {
+    label: "Home",
+    path: "/",
+    value: "home",
+  },
+  {
+    label: "UpComing",
+    path: "",
+    value: "upcoming",
+  },
+  {
+    label: "Team",
+    path: "/team",
+    value: "team",
+  },
+  {
+    label: "Sign in",
+    path: "https://optimus.quashbugs.com",
+    value: "signin",
+  },
+];
 
 const Header = () => {
   const [selected, setSelected] = useState("Home");
   const [open, setOpen] = useState(false);
-
-  const mobileNav = [
-    {
-      label: "Home",
-      value: "home",
-    },
-    {
-      label: "UpComing",
-      value: "upcoming",
-    },
-    {
-      label: "Team",
-      value: "team",
-    },
-    {
-      label: "Sign in",
-      value: "signin",
-    },
-  ];
+  const router = useRouter();
 
   return (
     <div className="header fixed top-0 py-2 px-4 w-full flex justify-between items-center md:px-[120px] md:py-6 z-50">
@@ -57,36 +63,50 @@ const Header = () => {
           className="hidden md:flex"
         />
         <div className="hidden md:flex gap-6 items-center">
-          {navButtons.map((nav, index) => (
+          {mobileNav.map((nav, index) => (
             <Button
               key={index}
-              className={`hover:text-gray-200 text-[16px] font-[500] leading-[20.8px] ${
-                selected === nav ? "text-white" : "text-[#8A8894]"
+              className={`hover:text-gray-200 ${
+                index === 3 ? "hidden" : "flex"
+              } text-[16px] font-[500] leading-[20.8px] ${
+                selected === nav.value ? "text-white" : "text-[#8A8894]"
               }`}
               variant="ghost"
               onClick={() => {
-                setSelected(nav);
+                setSelected(nav.value);
+                router.push(nav.path);
               }}
             >
-              {nav}
+              {nav.label}
             </Button>
           ))}
         </div>
       </div>
 
       <div className="flex gap-3 md:gap-6 items-center text-center">
-        <span className="text-[12px] md:text-[16px] text-[#FFFFFF] font-[600] leading-[15px] md:leading-5">
+        <span
+          className="text-[12px] md:text-[16px] text-[#FFFFFF] font-[600] leading-[15px] md:leading-5 hover:cursor-pointer hover:text-[#FFFFFFCC]"
+          onClick={() => {
+            router.push("https://optimus.quashbugs.com");
+          }}
+        >
           Sign in
         </span>
         <Button
-          className="text-[#000000] text-[12px] font-[600] leading-[15px] bg-[#FFFFFF] px-2 py-[6px] rounded-[100px] h-[28px] md:hidden"
+          className="text-[#000000] text-[12px] font-[600] leading-[15px] bg-[#FFFFFF] px-2 py-[6px] rounded-[100px] h-[28px] md:hidden hover:bg-[#FFFFFFCC]"
           variant="outline"
+          onClick={() => {
+            router.push("https://optimus.quashbugs.com/signup");
+          }}
         >
           Get Started
         </Button>
         <Button
-          className="text-[#000000] text-[16px] font-[600] leading-[20px] bg-[#FFFFFF] hidden px-4 py-[14px] rounded-[100px] h-[48px] md:flex"
+          className="text-[#000000] text-[16px] font-[600] leading-[20px] bg-[#FFFFFF] hidden px-4 py-[14px] rounded-[100px] h-[48px] md:flex hover:bg-[#FFFFFFCC]"
           variant="outline"
+          onClick={() => {
+            router.push("https://optimus.quashbugs.com/signup");
+          }}
         >
           Get Started for Free
         </Button>
@@ -120,15 +140,24 @@ const Header = () => {
                   className="flex justify-start items-center p-2"
                   key={index}
                 >
-                  <span className="text-[12px] text-white font-[500] leading-5">
+                  <span
+                    className="text-[12px] text-white font-[500] leading-5 hover:cursor-pointer hover:text-[#FFFFFFCC]"
+                    onClick={() => {
+                      router.push(nav.path);
+                      setOpen(false);
+                    }}
+                  >
                     {nav.label}
                   </span>
                 </div>
               ))}
               <div className="flex justify-between items-center p-2">
                 <Button
-                  className="text-[#000000] text-[12px] font-[600] leading-[15px] bg-[#FFFFFF] px-2 py-[6px] rounded-[100px] h-[28px] md:hidden"
+                  className="text-[#000000] text-[12px] font-[600] leading-[15px] bg-[#FFFFFF] px-2 py-[6px] rounded-[100px] h-[28px] md:hidden hover:bg-[#FFFFFFCC]"
                   variant="outline"
+                  onClick={() => {
+                    router.push("https://optimus.quashbugs.com/signup");
+                  }}
                 >
                   Get Started for free
                 </Button>

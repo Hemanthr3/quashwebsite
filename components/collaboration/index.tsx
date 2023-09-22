@@ -26,7 +26,7 @@ const Collaboration = () => {
       <span className="text-[#ECECEE] text-[16px] font-[300] md:text-[24px] md:mt-5 md:font-[400] w-[236px] text-center leading-normal pb-20 md:pb-[170px] md:w-full">
         Manage all your testing workflows in a single place
       </span>
-      <div className="flex justify-center items-center md:pb-[284px]">
+      <div className="flex justify-center items-center md:pb-[248px]">
         <Image
           src="/track.svg"
           alt=""

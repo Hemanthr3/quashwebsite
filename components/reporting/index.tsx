@@ -7,7 +7,7 @@ const reportingMedia = ["/shake.svg", "/logs.svg", "/notes.svg"];
 
 const Reporting = () => {
   return (
-    <div className="flex px-4 pb-16 flex-col justify-center items-center">
+    <div className="flex px-4 pb-16 md:pb-12  flex-col justify-center items-center">
       <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
         {/* <Image
           src="/reporting-gradient.svg"
@@ -28,7 +28,7 @@ const Reporting = () => {
       <span className="text-[#ECECEE] text-[16px] font-[300] md:text-[24px] md:mt-5 md:font-[400] w-[236px] text-center leading-normal pb-20 md:pb-[170px] md:w-full">
         Raise comprehensive tickets with minimal effort
       </span>
-      <div className="hidden justify-center items-center gap-10 px-[116px] pb-[256px]  md:flex">
+      <div className="hidden justify-center items-center gap-10 px-[116px]   md:flex">
         {reportingMedia.map((media, index) => (
           <Image
             key={index}

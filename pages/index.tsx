@@ -15,19 +15,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <Comparision />
-        <Reporting />
-        <Resolution />
-        <Collaboration />
-        <Integration />
-        <CodeSection />
-        <Callback />
-      </main>
-      <Footer />
+    <div className="h-full">
+      <Hero />
+      <Comparision />
+      <Reporting />
+      <Resolution />
+      <Collaboration />
+      <Integration />
+      <CodeSection />
+      <Callback />
     </div>
   );
 }

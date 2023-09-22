@@ -3,10 +3,13 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Button } from "../ui/button";
+import { useRouter } from "next/router";
 
 const Callback = () => {
+  const router = useRouter();
+
   return (
-    <div className="flex px-5 pb-[112px] pt-[96px] md:pb-[228px] flex-col justify-center items-center">
+    <div className="flex px-5 pb-[112px] pt-[96px] md:pt-[20px] md:pb-[228px] flex-col justify-center items-center">
       <div className="relative w-full justify-center items-center flex-col overflow-hidden md:flex hidden">
         <div className="grad-callback h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
         <div className="w-full h-[48px] md:h-[200px] absolute top-0 bg-black"></div>
@@ -25,8 +28,11 @@ const Callback = () => {
           </span>
         </div>
         <Button
-          className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-3 md:py-[14px] rounded-[100px] h-[58px] flex z-10 leading-5 md:leading-normal"
+          className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-3 md:py-[14px] rounded-[100px] h-[58px] flex z-10 leading-5 md:leading-normal hover:bg-[#FFFFFFCC]"
           variant="outline"
+          onClick={() => {
+            router.push("https://optimus.quashbugs.com/signup");
+          }}
         >
           Get Started for Free
         </Button>

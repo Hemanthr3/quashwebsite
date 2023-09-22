@@ -6,11 +6,12 @@ import React from "react";
 const footerNav = [
   {
     label: "Documentation",
-    route: "",
+    route:
+      "https://bumpy-point-aa4.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47",
   },
   {
     label: "Privacy Policy",
-    route: "",
+    route: "/privacy",
   },
   {
     label: "Support",
@@ -21,7 +22,7 @@ const footerNav = [
 const footerCareer = [
   {
     label: "Careers",
-    route: "",
+    route: "/team",
   },
   {
     label: "Contact Sales",
@@ -37,12 +38,25 @@ const footerContact = [
   },
   {
     label: "hello@quashbugs.com",
-    route: "",
+    route: "mailto:hello@quashbugs.com",
     icon: <PaperPlaneTilt size={20} color="#FFFFFF" className="opacity-50" />,
   },
 ];
 
-const footerMedia = ["/linkedIn.svg", "/product-hunt.svg", "/x-logo.svg"];
+const footerMedia = [
+  {
+    img: "/linkedIn.svg",
+    route: "https://www.linkedin.com/company/quash-bugs/",
+  },
+  {
+    img: "/product-hunt.svg",
+    route: "",
+  },
+  {
+    img: "/x-logo.svg",
+    route: "",
+  },
+];
 
 const Footer = () => {
   const router = useRouter();
@@ -82,24 +96,24 @@ const Footer = () => {
         <div className="flex flex-col gap-6 md:gap-8 justify-center items-start md:justify-start">
           <div className="flex gap-[22px] justify-start">
             {footerMedia.map((media, index) => (
-              <>
+              <a href={media.route} key={index} target="_blank">
                 <Image
                   key={index}
-                  src={media}
-                  alt={media}
+                  src={media.img}
+                  alt={media.img}
                   width={48}
                   height={48}
                   className="ml-[-5px] flex md:hidden"
                 />
                 <Image
                   key={index}
-                  src={media}
-                  alt={media}
+                  src={media.img}
+                  alt={media.img}
                   width={71}
                   height={71}
                   className="ml-[-5px] hidden md:flex"
                 />
-              </>
+              </a>
             ))}
           </div>
           <div className="flex flex-col gap-6 md:gap-4 justify-center items-start text-center">

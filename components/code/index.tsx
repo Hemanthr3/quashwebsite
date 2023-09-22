@@ -1,6 +1,8 @@
 import { ArrowRight, ClipboardText } from "@/lib/icons";
-import Image from "next/image";
+import { fira } from "@/pages/_app";
 import React, { useState } from "react";
+
+const codeFira = fira;
 
 const OS = [
   {
@@ -21,7 +23,9 @@ const CodeSection = () => {
   const [isOs, setIsOs] = useState("android");
 
   return (
-    <div className="px-4 py-[96px] md:px-[275px] md:py-[250px] flex flex-col gap-8 md:gap-0 justify-center items-center text-center">
+    <div className="relative px-4 py-[96px] md:px-[275px] md:py-[128px] flex flex-col gap-8 md:gap-0 justify-center items-center text-center">
+      <div className="absolute inset-0  bg-[url('/Gradient.svg')] w-full -z-10 hidden md:flex" />
+
       <span className="w-[282px] text-[18px] md:text-[42px] md:w-full text-[#FFFFFF] font-[500] leading-normal">
         Integrate Quash SDK in less than a minute
       </span>
@@ -32,11 +36,11 @@ const CodeSection = () => {
           absolute top-2 right-2 md:top-[18px] md:right-[18px]"
         /> */}
         <div className="w-full  rounded-2xl md:rounded-3xl bg-[#0D0D0D]">
-          <div className="px-4 md:px-8 pt-[6px] md:pt-[10px] gap-3 md:gap-4 flex justify-start items-center border-b border-[#4A4B50] text-[12px] md:text-[24px] font-[400] md:font-[600]">
+          <div className="px-4 md:px-8 pt-[6px] md:pt-[10px] gap-3 md:gap-4 flex justify-start items-center border-b border-[#4A4B50] text-[12px] md:text-[24px] font-[400] md:font-[600] hover:cursor-pointer">
             {OS.map((item, index) => (
               <span
                 onClick={() => {
-                  setIsOs(item.value);
+                  // setIsOs(item.value);
                 }}
                 key={index}
                 className={`${
@@ -46,13 +50,17 @@ const CodeSection = () => {
                 }   border-[rgba(255, 255, 255, 0.06)] mb-[-0.2px]`}
               >
                 {item.label}
+                {/* {index > 0 && "(Coming Soon)"} */}
               </span>
             ))}
 
             {/* <span className="text-[#ECECEE99]"></span>
             <span className="text-[#ECECEE99]"></span> */}
           </div>
-          <div className="w-full text-[10px] leading-[0.05] md:text-[24px] md:leading-[0.116] overflow-x-scroll md:overflow-auto flex md:item-center gap-[12px] p-4 md:px-8 md:pt-10 md:pb-8">
+          <div
+            style={codeFira.style}
+            className="w-full text-[10px] leading-[0.05] md:text-[24px] md:leading-[0.116] overflow-x-scroll md:overflow-auto flex md:item-center gap-[12px] p-4 md:px-8 md:pt-10 md:pb-8"
+          >
             <div className="numbers md:gap-[3px] text-[10px] leading-[0.05] md:text-[24px] md:leading-[0.129] flex flex-col ">
               <p>1</p>
               <p>2</p>
@@ -135,12 +143,12 @@ const CodeSection = () => {
         </div>
       </div>
       <a
-        href=""
-        className="text-[16px] md:text-[42px]  text-center font-[300] text-white flex gap-1 md:gap-2 justify-center items-center md:mt-[40px] "
+        href="https://bumpy-point-aa4.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47"
+        className="underline text-[16px] md:text-[24px]  md:font-[400] text-center font-[300] text-white flex gap-1 md:gap-2 justify-center items-center md:mt-[40px] "
       >
         <span>Learn more</span>
         <ArrowRight
-          className="h-4 w-4 pt-1 md:pt-2 md:h-10 md:w-10"
+          className="h-6 w-6 pt-1 md:pt-2 md:h-8 md:w-8"
           color="#ffffff"
         />
       </a>
